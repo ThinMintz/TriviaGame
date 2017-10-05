@@ -1,0 +1,22 @@
+.jumbotron {
+background-image: url('../images/LOTR.jpg');
+font-family:'Almendra SC', serif;
+background-size: cover;
+}
+
+h1, h2{
+   color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+}
+
+div.jumbotron div.col-md-6 p {
+	color: black;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+   font-size: 40px;
+   margin-bottom: 0px;
+   margin-top: 50px
+}
