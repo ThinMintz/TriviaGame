@@ -22,8 +22,9 @@
     
     <div class="container" id="container1">
         <div class="row justify-content-md-center">
-        <button type="button" class="btn btn-success btn-lg btn-block" id="startButton">
-        <h3>Will you pass?...Start the Game!</h3></button>
+            <button type="button" class="btn btn-success btn-lg btn-block" id="startButton">
+            <h3>Speak friend, and enter!</h3></button>
+        </div>
     </div>
 
     <div class="container" id="container2">
@@ -72,9 +73,11 @@
         </div>
     </div>
 <script type="text/javascript">
+$("#container2").hide();
 
 $("#startButton").click(function() {
     $("#container1").hide();
+    $("#container2").show();
 });
 
 
