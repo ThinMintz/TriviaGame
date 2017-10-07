@@ -20,3 +20,7 @@ div.jumbotron div.col-md-6 p {
    margin-bottom: 0px;
    margin-top: 50px
 }
+
+h4, button {
+   font-family: "Cormorant Unicase", serif;
+}
