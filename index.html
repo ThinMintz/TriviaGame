@@ -39,16 +39,16 @@
             </div>
         </div>
 
-     
+    
  <div class="row justify-content-md-center">
             <div class="col-md-12">
-                <h4 class="text-center" id="Question1">What kind of creatures are the spawn of Ungoliant?</h4>
+                <h4 class="text-center question1">What kind of creatures are the spawn of Ungoliant?</h4>
             </div>
             <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary answer" id="isWrong">Flying fell beasts</button>
-                <button type="button" class="btn btn-secondary answer" id="isCorrect">Giant Spiders</button>
-                <button type="button" class="btn btn-secondary answer" id="isWrong">Uruk-hai</button>
-                <button type="button" class="btn btn-secondary answer" id="isWrong">Hill Giants</button>
+                <button type="button" class="btn btn-secondary answers1" >Flying fell beasts</button>
+                <button type="button" class="btn btn-secondary answers1 isCorrect">Giant Spiders</button>
+                <button type="button" class="btn btn-secondary answers1">Uruk-hai</button>
+                <button type="button" class="btn btn-secondary answers1">Hill Giants</button>
             </div>
         </div>
         
@@ -123,30 +123,47 @@
                 <button type="button" class="btn btn-secondary">A mug of Elvish beer</button>
             </div>
         </div>      
-<img src="">
-<script type="text/javascript">
 
- 
-$("#container2").hide();
+    <script type="text/javascript">
+    $("#container2").hide();
 
-$("#startButton").click(function() {
+    $("#startButton").click(function() {
     $("#container1").hide();
     $("#container2").show();
-});
+    });
 
-$(".answer").on("click", function (evt) {
+/*    function Questions(Question, Answers, isCorrect) {
+        this.question = question;
+        this.answers = answers;
+        this.isCorrect = isCorrect;
+    }
+var question1 = new Question (
+    "What kind of creatures are the spawn of Ungoliant?", 
+    ['Flying fell beasts','Giant Spiders','Uruk-hai','Hill Giants'], 
+    "isCorrect");
+
+console.log(question1);
+
+*/
+
+
+
+ /*   var questions = {
+        question1 : "What kind of creatures are the spawn of Ungoliant?",
+        answers1 : ['Flying fell beasts','Giant Spiders','Uruk-hai','Hill Giants'],
+        isCorrect : true,
+    }
+        
+        console.log(questions);*/
+
+
+    $(".answer").on("click", function (evt) {
     console.log(evt);
     console.log(this);
-    if $(isWrong === false) {
-        $('.answer').fade();
-    } else if {
-  
-    }
-});
+    });
+    
 
-
-
-</script>
+    </script>
 
 </body>
 
