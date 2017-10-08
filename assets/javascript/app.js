@@ -1,5 +1,10 @@
 /*game starts with a start button, that starts the game 
 (and timer) when clicked*/
+
+//will try to make 2 containers and show one and hide one when the game starts
+
+
+//will try to hide 
 var startGame()
 
 $("Button").click(function() {
