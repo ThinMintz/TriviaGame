@@ -38,111 +38,82 @@
                 </div>
             </div>
         </div>
+
+<!-- Make the HTML fillable/overwriteable, rather than writing it all out  -->      
         <div class="row justify-content-md-center">
             <div class="col-md-12">
-                <h4 class="text-center">Question</h4>
+                <h4 class="text-center" id="question"> </h4>
             </div>
             <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary answer" id="a"> </button>
-                <button type="button" class="btn btn-secondary answer" id="b"> </button>
-                <button type="button" class="btn btn-secondary answer" id="c"> </button>
-                <button type="button" class="btn btn-secondary answer" id="d"> </button>
+                <button class="answerArray"> </button>
             </div>
         </div>
-        
-<!--         <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center">What kind of creatures are the spawn of Ungoliant?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Flying fell beasts</button>
-                <button type="button" class="btn btn-secondary">Giant Spiders</button>
-                <button type="button" class="btn btn-secondary">Uruk-hai</button>
-                <button type="button" class="btn btn-secondary">Hill Giants</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center">Who was Elanor Gardner? (Also known as Elanor the Fair)?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">The daughter of Samwise Gamgee and Rosie Cotton</button>
-                <button type="button" class="btn btn-secondary">The Queen of Mirkwood and mother of Legolas</button>
-                <button type="button" class="btn btn-secondary">Wife of the Bard the Bowman of Laketown</button>
-                <button type="button" class="btn btn-secondary">The mother of Aragon</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center">How many Rings of Power were forged in the second age?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">1</button>
-                <button type="button" class="btn btn-secondary">19</button>
-                <button type="button" class="btn btn-secondary">20</button>
-                <button type="button" class="btn btn-secondary">13</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center">What is the name of Elronds brother?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Elladan</button>
-                <button type="button" class="btn btn-secondary">Gwaihir</button>
-                <button type="button" class="btn btn-secondary">Estel</button>
-                <button type="button" class="btn btn-secondary">Elros</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center">Which is the only named female Dwarf in the Hobbit or the Lord of the Rings?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Dís</button>
-                <button type="button" class="btn btn-secondary">Nimphelos</button>
-                <button type="button" class="btn btn-secondary">Mîm</button>
-                <button type="button" class="btn btn-secondary">Aulë</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center">Which are the following are not Maiar(Maia)?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Gandalf</button>
-                <button type="button" class="btn btn-secondary">Manwë</button>
-                <button type="button" class="btn btn-secondary">Balrogs</button>
-                <button type="button" class="btn btn-secondary">Melian</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center">In "Fellowship of the Ring," what gift does Lady Galadriel give Gimli before the fellowship leaves Lothlorien?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">An Elvish Axe</button>
-                <button type="button" class="btn btn-secondary">A Dwarvish Dagger</button>
-                <button type="button" class="btn btn-secondary">3 strands of her hair</button>
-                <button type="button" class="btn btn-secondary">A mug of Elvish beer</button>
-            </div>
-        </div>   -->        
-    </div>
+    </div>  
 
 
 <script type="text/javascript">
+//write out each question with answers and correct answer
 
-$(".answer").on("click", function (evt) {
-/*    console.log(evt);
-    console.log(this);*/
-});
+var correctAnswer = 0;
 
+
+
+    var questionArray = [
+        question1 = {
+            question: "What kind of creatures are the spawn of Ungoliant?"
+            answerArray = ['Flying fell beasts','Giant Spiders','Uruk-hai','Hill Giants']
+            correctAnswer = 2
+        }
+
+        /*question2 = {
+            question: "Who was Elanor Gardner? (Also known as Elanor the Fair)?";
+            answerArray = ['The daughter of Samwise Gamgee and Rosie Cotton','The Queen of Mirkwood and mother of Legolas','Wife of the Bard the Bowman of Laketown','The mother of Aragon'];
+            correctAnswer = 1
+        };
+
+        question3 = {
+            question: "How many Rings of Power were forged in the second age?";
+            answerArray = ['1','19','20','13'];
+            correctAnswer = 3
+        };
+
+        question4 = {
+            question: "What is the name of Elronds brother?";
+            answerArray = ['Elladan','Gwaihir','Estel','Elros'];
+            correctAnswer = 4;
+        };
+
+        question5 = {
+            question: "What are Durin's Folk more commonly known as?";
+            answerArray = ['Forest Elves','Great Eagles','Hobbits that moved from the Shire','Dwarves'];
+            correctAnswer = 4;
+        };
+
+        question6 = {
+            question: "Which is the only named female Dwarf in the Hobbit or the Lord of the Rings?";
+            answerArray = ['Dís','Nimphelos','Mîm','Aulë'];
+            correctAnswer = 1
+        };
+
+        question7 = {
+            question: "Which are the following are not Maiar(Maia)?";
+            answerArray = ['Gandalf','Manwë','Balrogs','Melian'];
+            correctAnswer = 2
+        };
+
+        question8 = {
+            question: "In 'Fellowship of the Ring,' what gift does Lady Galadriel give Gimli before the fellowship leaves Lothlorien?";
+            answerArray = ['An Elvish Axe','A Dwarvish Dagger','3 strands of her hair','A mug of Elvish beer'];
+            correctAnswer = 3
+        };*/
+    ]
+
+var currentQuestion = 0;
+var correctAnswers = 0;
+var quizOver = false;
+
+$(document).ready(function() {
+ 
 $("#container2").hide();
 
 $("#startButton").click(function() {
@@ -150,14 +121,7 @@ $("#startButton").click(function() {
     $("#container2").show();
 
 
-//tried to get timer working, no dice :(    
- /*   function fiveSeconds() {
-    setTimeout(fiveSeconds, 1000 * 30);
-    $(".text-center").append();
-    console.log(setTimeout);
-}*/
-});
-
+}
 
 </script>
 
