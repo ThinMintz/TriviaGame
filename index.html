@@ -42,7 +42,7 @@
     
  <div class="row justify-content-md-center">
             <div class="col-md-12">
-                <h4 class="text-center question1">What kind of creatures are the spawn of Ungoliant?</h4>
+                <h4 class="text-center question1"> </h4>
             </div>
             <div class="btn-group-vertical">
                 <button type="button" class="btn btn-secondary answers1" >Flying fell beasts</button>
@@ -132,36 +132,60 @@
     $("#container2").show();
     });
 
-/*    function Questions(Question, Answers, isCorrect) {
-        this.question = question;
-        this.answers = answers;
-        this.isCorrect = isCorrect;
-    }
-var question1 = new Question (
-    "What kind of creatures are the spawn of Ungoliant?", 
-    ['Flying fell beasts','Giant Spiders','Uruk-hai','Hill Giants'], 
-    "isCorrect");
+// create the questions
+var answers;
+var question;
+var isCorrect;
 
-console.log(question1);
-
-*/
-
-
-
- /*   var questions = {
-        question1 : "What kind of creatures are the spawn of Ungoliant?",
-        answers1 : ['Flying fell beasts','Giant Spiders','Uruk-hai','Hill Giants'],
-        isCorrect : true,
-    }
+  var questions = [ {
+        question : "What kind of creatures are the spawn of Ungoliant?",
+        answers : ['Flying fell beasts','Giant Spiders','Uruk-hai','Hill Giants'],
+        isCorrect : 'Giant Spiders'
+    },{ 
+        question: "Who was Elanor Gardner? (Also known as Elanor the Fair)?",
+        answerArray : ['The daughter of Samwise Gamgee and Rosie Cotton','The Queen of Mirkwood and mother of Legolas','Wife of the Bard the Bowman of Laketown','The mother of Aragon'],
+        isCorrect : 'The daughter of Samwise Gamgee and Rosie Cotton'
         
-        console.log(questions);*/
 
+    },{
+        question: "How many Rings of Power were forged in the second age?",
+        answerArray : ['1','19','20','13'],
+        isCorrect : '20'
+
+    },{
+        question: "What is the name of Elronds brother?",
+        answerArray :['Elladan','Gwaihir','Estel','Elros'],
+        isCorrect :'Elros'
+     
+    },{
+        question: "What are Durin's Folk more commonly known as?",
+        answerArray :['Forest Elves','Great Eagles','Hobbits that moved from the Shire','Dwarves'],
+        isCorrect : 'Dwarves'
+
+    },{
+        question: "Which is the only named female Dwarf in the Hobbit or the Lord of the Rings?",
+        answerArray : ['Dís','Nimphelos','Mîm','Aulë'],
+        isCorrect : 'Dís'
+
+    },{
+        question: "Which are the following are not Maiar(Maia)?",
+        answerArray : ['Gandalf','Manwë','Balrogs','Melian'],
+        isCorrect : 'Manwë'
+
+    },{
+        question: "In 'Fellowship of the Ring,' what gift does Lady Galadriel give Gimli before the fellowship leaves Lothlorien?",
+        answerArray : ['An Elvish Axe','A Dwarvish Dagger','3 strands of her hair','A mug of Elvish beer'],
+        isCorrect : '3 strands of her hair'
+
+    }];
+console.log(questions);
+/*
 
     $(".answer").on("click", function (evt) {
     console.log(evt);
     console.log(this);
     });
-    
+    */
 
     </script>
 
