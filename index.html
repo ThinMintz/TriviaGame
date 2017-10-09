@@ -34,21 +34,21 @@
             <div class="col-md-4">
                 <div class="card-body">
                     <h3 class="text-center">Timer:</h3>
-                    <p class="text-center">Timer goes here!</p>
+                    <p class="text-center" id="timer">Timer goes here!</p>
                 </div>
             </div>
         </div>
 
     
- <div class="row justify-content-md-center">
+ <div class="row justify-content-md-center" >
             <div class="col-md-12">
-                <h4 class="text-center question1"> </h4>
+                <h4 class="text-center question1">What kind of creatures are the spawn of Ungoliant?</h4>
             </div>
             <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary answers1" >Flying fell beasts</button>
-                <button type="button" class="btn btn-secondary answers1 isCorrect">Giant Spiders</button>
-                <button type="button" class="btn btn-secondary answers1">Uruk-hai</button>
-                <button type="button" class="btn btn-secondary answers1">Hill Giants</button>
+                <button type="button" class="btn btn-secondary answers isWrong">Flying fell beasts</button>
+                <button type="button" class="btn btn-secondary answers isCorrect">Giant Spiders</button>
+                <button type="button" class="btn btn-secondary answers isWrong">Uruk-hai</button>
+                <button type="button" class="btn btn-secondary answers isWrong">Hill Giants</button>
             </div>
         </div>
         
@@ -125,28 +125,61 @@
         </div>      
 
     <script type="text/javascript">
+//the questions are hidden at first   
     $("#container2").hide();
 
+//on the start click, the start button goes away and the questions appear
     $("#startButton").click(function() {
-    $("#container1").hide();
-    $("#container2").show();
+        $("#container1").hide();
+        $("#container2").show();
+        time();
+        run();
     });
 
 // create the questions
-var answers;
-var question;
+var answers = document.getElementById("#answers");
+var question = document.getElementById("#answers");
 var isCorrect;
+var isWrong;
+var startAt = 30;
+var correctAnswers;
+var finalScore;
+var wrongAnswers;
+
+//timer functions
+function time(){
+    $("#timer").html("<p>" + number +"</p>");
+}
+
+function run(){
+    counter = setInterval(countDown, 1000);
+}
+
+function countDown(){
+    number--;
+    time();
+    if (number === 0) {
+        stop();
+    }
+}
+
+
+function stop(){
+    clearInterval(counter);
+    clearTimeout(counter);
+    number = startAt;
+    unanswered();
+}
 
   var questions = [ {
         question : "What kind of creatures are the spawn of Ungoliant?",
-        answers : ['Flying fell beasts','Giant Spiders','Uruk-hai','Hill Giants'],
-        isCorrect : 'Giant Spiders'
+        answers : ["Flying fell beasts","Giant Spiders","Uruk-hai","Hill Giants"],
+        isCorrect : "Giant Spiders"
     },{ 
         question: "Who was Elanor Gardner? (Also known as Elanor the Fair)?",
         answerArray : ['The daughter of Samwise Gamgee and Rosie Cotton','The Queen of Mirkwood and mother of Legolas','Wife of the Bard the Bowman of Laketown','The mother of Aragon'],
         isCorrect : 'The daughter of Samwise Gamgee and Rosie Cotton'
         
-
     },{
         question: "How many Rings of Power were forged in the second age?",
         answerArray : ['1','19','20','13'],
@@ -179,13 +212,13 @@ var isCorrect;
 
     }];
 console.log(questions);
-/*
 
-    $(".answer").on("click", function (evt) {
+        $(".answers").on("click", function (evt) {
+            $(".isWrong").fade(1000, 0.4);
     console.log(evt);
     console.log(this);
     });
-    */
+    
 
     </script>
 
