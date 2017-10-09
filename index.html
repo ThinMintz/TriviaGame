@@ -42,7 +42,7 @@
     
  <div class="row justify-content-md-center" >
             <div class="col-md-12">
-                <h4 class="text-center question1">What kind of creatures are the spawn of Ungoliant?</h4>
+                <h4 class="text-center" id="question1">What kind of creatures are the spawn of Ungoliant?</h4>
             </div>
             <div class="btn-group-vertical">
                 <button type="button" class="btn btn-secondary answers isWrong">Flying fell beasts</button>
@@ -146,31 +146,6 @@ var correctAnswers;
 var finalScore;
 var wrongAnswers;
 
-//timer functions
-function time(){
-    $("#timer").html("<p>" + number +"</p>");
-}
-
-function run(){
-    counter = setInterval(countDown, 1000);
-}
-
-function countDown(){
-    number--;
-    time();
-    if (number === 0) {
-        stop();
-    }
-}
-
-
-function stop(){
-    clearInterval(counter);
-    clearTimeout(counter);
-    number = startAt;
-    unanswered();
-}
-
   var questions = [ {
         question : "What kind of creatures are the spawn of Ungoliant?",
         answers : ["Flying fell beasts","Giant Spiders","Uruk-hai","Hill Giants"],
@@ -211,14 +186,25 @@ function stop(){
         isCorrect : '3 strands of her hair'
 
     }];
+//console.log questions
 console.log(questions);
 
-        $(".answers").on("click", function (evt) {
-            $(".isWrong").fade(1000, 0.4);
+//console.log question 1
+console.log(questions[0].question);
+
+
+/*var question1 = document.getElementById("question1")
+for (var i = 0; i < questions.length; i++) {
+        questions[0]
+}
+console.log(questions[0]);
+*/
+
+/*$(".answers").on("click", function (evt) {
     console.log(evt);
     console.log(this);
     });
-    
+    */
 
     </script>
 
