@@ -34,7 +34,7 @@
             <div class="col-md-4">
                 <div class="card-body">
                     <h3 class="text-center">Timer:</h3>
-                    <p class="text-center" id="timer">Timer goes here!</p>
+                    <p class="text-center" id="timer"> </p>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
     
  <div class="row justify-content-md-center" >
             <div class="col-md-12">
-                <h4 class="text-center" id="question1">What kind of creatures are the spawn of Ungoliant?</h4>
+                <h4 class="text-center" id="question">What kind of creatures are the spawn of Ungoliant?</h4>
             </div>
             <div class="btn-group-vertical">
                 <button type="button" class="btn btn-secondary answers isWrong">Flying fell beasts</button>
@@ -125,6 +125,17 @@
         </div>      
 
     <script type="text/javascript">
+
+var audio = new Audio("http://www.moviesoundscentral.com/sounds/lord_of_the_rings/youshallnotpasss.wav");
+var audio2 = new Audio("http://www.moviesoundscentral.com/sounds/lord_of_the_rings/terriblyclever.wav")
+var answers = document.getElementById("#answers");
+var question = document.getElementById(".question");
+var isCorrect;
+var isWrong;
+var correctAnswers;
+var finalScore;
+var wrongAnswers;
+
 //the questions are hidden at first   
     $("#container2").hide();
 
@@ -132,20 +143,54 @@
     $("#startButton").click(function() {
         $("#container1").hide();
         $("#container2").show();
-        time();
-        run();
     });
 
-// create the questions
-var answers = document.getElementById("#answers");
-var question = document.getElementById("#answers");
-var isCorrect;
-var isWrong;
-var startAt = 30;
-var correctAnswers;
-var finalScore;
-var wrongAnswers;
+//create timer
 
+//timer starts at 30 seconds and counts down from there
+var counter = 30;
+var interval = setInterval(function() {
+    counter--;
+    console.log(counter);
+}, 1000);
+    // Display 'counter' wherever you want to display it.
+ /* if (counter == 0) {
+        // Display a login box
+   $("#timer").append("<p>counter</p>");
+        clearInterval(interval);
+    }*/
+
+console.log(counter);
+
+//timeUp should only run if time is up and answers have not been completed
+setTimeout(timeUp, 1000 * 30);
+    function timeUp() {
+  $("#timer").append("<p>You shall not PASS!</p>");
+   audio.play();
+    }
+
+//if answers have been completed
+    function onTime() {
+  $("#timer").append("<p>I suppose you thing that was terribly clever</p>");
+   audio2.play();
+    }
+
+
+
+
+//timer starts once the start button is clicked
+
+//add a submit button
+
+//upon clicking a question, if it is correct the button should turn green, if it is wrong, the button should shake, fade, or turn red
+
+//once an answer is chosen, user cannot choose another answer
+
+//once all the answers have been submitted (or the time runs out), user score pops up with right answers and wrong answers
+
+
+
+//write the questions
   var questions = [ {
         question : "What kind of creatures are the spawn of Ungoliant?",
         answers : ["Flying fell beasts","Giant Spiders","Uruk-hai","Hill Giants"],
