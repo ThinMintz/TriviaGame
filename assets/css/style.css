@@ -1,12 +1,12 @@
-body {
-   background-image: url('../images/Gates.jpg');
-}
+/* body {
+   background-image: url('../images/Background.jpg');
+} */
 
-/* .jumbotron {
+ .jumbotron {
 background-image: url('../images/LOTR.jpg');
 font-family:'Almendra SC', serif;
 background-size: cover;
-} */
+}
 
 h1, h2{
    color: black;

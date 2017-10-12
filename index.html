@@ -1,158 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Almendra+SC|Cormorant+Unicase" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/javascript" href="assets/javascript/app.js">
-    <title>Lord of the Ring's Trivia</title>
-</head>
-
-<body>
-    
-    <!-- <div class="container" id="container1">
-        <div class="row justify-content-md-center">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-success btn-lg btn-block" id="startButton">
-                        <h3>Speak friend, and enter!</h3>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="container" id="container2">
-        <div class="row justify-content-md-center"> 
-            <div class="col-md-4">
-                <div class="card-body">
-                    <h3 class="text-center">Timer:</h3>
-                    <p class="text-center" id="timer"> </p>
-                </div>
-            </div>
-        </div> -->
-
-    
- <div class="row justify-content-md-center" >
-            <div class="col-md-12">
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css?family=Almendra+SC|Cormorant+Unicase" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+     <link rel="stylesheet" type="text/javascript" href="assets/javascript/app.js">
+     <title>Lord of the Ring's Trivia</title>
+ </head>
+ 
+ <body>
+     <div class="jumbotron">
+         <h1 class="display-2">Lord of the Rings</h1>
+         <h2 class="display-4">Trivia Game</h2>
+     </div>
+     
+     <div class="container" id="container1">
+         <div class="row justify-content-md-center">
+             <button type="button" class="btn btn-success btn-lg btn-block" id="startButton">
+             <h3>Speak friend, and enter!</h3>
+             </button>
+             <img src="assets/images/Gates.jpg">
+         </div>
+     </div>
+ 
+     <div class="container" id="container2">
+         <div class="row justify-content-md-center"> 
+              <div class="col-md-4">
+                  <div class="card-body">
+                      <h3 class="text-center">Timer:</h3>
+                  <p class="text-center" id="timer">Timer goes here!</p>
+                  <p class="text-center" id="timer"> </p>
+                  </div>
+              </div>
+          </div>
+  
+      
+   <div class="row justify-content-md-center">
+              <div class="col-md-12">
                 <h4 class="text-center" id="question1">What kind of creatures are the spawn of Ungoliant?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary answers isWrong">Flying fell beasts</button>
-                <button type="button" class="btn btn-secondary answers isCorrect">Giant Spiders</button>
-                <button type="button" class="btn btn-secondary answers isWrong">Uruk-hai</button>
-                <button type="button" class="btn btn-secondary answers isWrong">Hill Giants</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center" id="Question2">Who was Elanor Gardner? (Also known as Elanor the Fair)?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">The daughter of Samwise Gamgee and Rosie Cotton</button>
-                <button type="button" class="btn btn-secondary">The Queen of Mirkwood and mother of Legolas</button>
-                <button type="button" class="btn btn-secondary">Wife of the Bard the Bowman of Laketown</button>
-                <button type="button" class="btn btn-secondary">The mother of Aragon</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center" id="Question3">How many Rings of Power were forged in the second age?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">1</button>
-                <button type="button" class="btn btn-secondary">19</button>
-                <button type="button" class="btn btn-secondary">20</button>
-                <button type="button" class="btn btn-secondary">13</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center" id="Question4">What is the name of Elronds brother?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Elladan</button>
-                <button type="button" class="btn btn-secondary">Gwaihir</button>
-                <button type="button" class="btn btn-secondary">Estel</button>
-                <button type="button" class="btn btn-secondary">Elros</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center" id="Question5">Which is the only named female Dwarf in the Hobbit or the Lord of the Rings?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Dís</button>
-                <button type="button" class="btn btn-secondary">Nimphelos</button>
-                <button type="button" class="btn btn-secondary">Mîm</button>
-                <button type="button" class="btn btn-secondary">Aulë</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center" id="Question6">Which are the following are not Maiar(Maia)?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Gandalf</button>
-                <button type="button" class="btn btn-secondary">Manwë</button>
-                <button type="button" class="btn btn-secondary">Balrogs</button>
-                <button type="button" class="btn btn-secondary">Melian</button>
-            </div>
-        </div>
-        
-        <div class="row justify-content-md-center">
-            <div class="col-md-12">
-                <h4 class="text-center" id="Question7">In "Fellowship of the Ring," what gift does Lady Galadriel give Gimli before the fellowship leaves Lothlorien?</h4>
-            </div>
-            <div class="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">An Elvish Axe</button>
-                <button type="button" class="btn btn-secondary">A Dwarvish Dagger</button>
-                <button type="button" class="btn btn-secondary">3 strands of her hair</button>
-                <button type="button" class="btn btn-secondary">A mug of Elvish beer</button>
-            </div>
-        </div>      
+              </div>
+              <div class="btn-group-vertical">
+                  <button type="button" class="btn btn-secondary answers isWrong">Flying fell beasts</button>
+                 <button type="button" class="btn btn-secondary answers isCorrect">Giant Spiders</button>
+                 <button type="button" class="btn btn-secondary answers isWrong">Uruk-hai</button>
+                 <button type="button" class="btn btn-secondary answers isWrong">Hill Giants</button>
+             </div>
+         </div>
+         
+         <div class="row justify-content-md-center">
+             <div class="col-md-12">
+                 <h4 class="text-center" id="Question2">Who was Elanor Gardner? (Also known as Elanor the Fair)?</h4>
+             </div>
+             <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-secondary">The daughter of Samwise Gamgee and Rosie Cotton</button>
+                 <button type="button" class="btn btn-secondary">The Queen of Mirkwood and mother of Legolas</button>
+                 <button type="button" class="btn btn-secondary">Wife of the Bard the Bowman of Laketown</button>
+                 <button type="button" class="btn btn-secondary">The mother of Aragon</button>
+             </div>
+         </div>
+         
+         <div class="row justify-content-md-center">
+             <div class="col-md-12">
+                 <h4 class="text-center" id="Question3">How many Rings of Power were forged in the second age?</h4>
+             </div>
+             <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-secondary">1</button>
+                 <button type="button" class="btn btn-secondary">19</button>
+                 <button type="button" class="btn btn-secondary">20</button>
+                 <button type="button" class="btn btn-secondary">13</button>
+             </div>
+         </div>
+         
+         <div class="row justify-content-md-center">
+             <div class="col-md-12">
+                 <h4 class="text-center" id="Question4">What is the name of Elronds brother?</h4>
+             </div>
+             <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-secondary">Elladan</button>
+                 <button type="button" class="btn btn-secondary">Gwaihir</button>
+                 <button type="button" class="btn btn-secondary">Estel</button>
+                 <button type="button" class="btn btn-secondary">Elros</button>
+             </div>
+         </div>
+         
+         <div class="row justify-content-md-center">
+             <div class="col-md-12">
+                 <h4 class="text-center" id="Question5">Which is the only named female Dwarf in the Hobbit or the Lord of the Rings?</h4>
+             </div>
+             <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-secondary">Dís</button>
+                 <button type="button" class="btn btn-secondary">Nimphelos</button>
+                 <button type="button" class="btn btn-secondary">Mîm</button>
+                 <button type="button" class="btn btn-secondary">Aulë</button>
+             </div>
+         </div>
+         
+         <div class="row justify-content-md-center">
+             <div class="col-md-12">
+                 <h4 class="text-center" id="Question6">Which are the following are not Maiar(Maia)?</h4>
+             </div>
+             <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-secondary">Gandalf</button>
+                 <button type="button" class="btn btn-secondary">Manwë</button>
+                 <button type="button" class="btn btn-secondary">Balrogs</button>
+                 <button type="button" class="btn btn-secondary">Melian</button>
+             </div>
+         </div>
+         
+         <div class="row justify-content-md-center">
+             <div class="col-md-12">
+                 <h4 class="text-center" id="Question7">In "Fellowship of the Ring," what gift does Lady Galadriel give Gimli before the fellowship leaves Lothlorien?</h4>
+             </div>
+             <div class="btn-group-vertical">
+                 <button type="button" class="btn btn-secondary">An Elvish Axe</button>
+                 <button type="button" class="btn btn-secondary">A Dwarvish Dagger</button>
+                 <button type="button" class="btn btn-secondary">3 strands of her hair</button>
+                 <button type="button" class="btn btn-secondary">A mug of Elvish beer</button>
+             </div>
+          </div>      
+  
+      <script type="text/javascript">
+ 
+ var audio = new Audio("http://www.moviesoundscentral.com/sounds/lord_of_the_rings/youshallnotpasss.wav");
+ var audio2 = new Audio("http://www.moviesoundscentral.com/sounds/lord_of_the_rings/terriblyclever.wav")
+ var answers = document.getElementById("#answers");
+ var question = document.getElementById(".question");
+ var isCorrect;
+ var isWrong;
+ var correctAnswers;
+ var finalScore;
+ var wrongAnswers;
+ 
+  //the questions are hidden at first   
+      $("#container2").hide();
+  
+  //on the start click, the start button goes away and the questions appear
+      $("#startButton").click(function() {
+          $("#container1").hide();
+          $("#container2").show();
+         time();
+         run();
+      });
+  
+//create some variables
+ var answers = document.getElementById("#answers");
+ var question = document.getElementById("#answers");
+ var isCorrect;
+ var isWrong;
+ var correctAnswers;
+ var finalScore;
+ var wrongAnswers;
+ //create timer
+ 
+ //timer starts at 30 seconds and counts down from there
+/* var counter = 30;
+ var interval = setInterval(function() {
+     counter--;
+     console.log(counter);
+//if counter = 0, stop counting    
+    if (counter == 0) {
+        clearInterval(interval);
+ }, 
+ 1000);*/
 
-    <script type="text/javascript">
-
-var audio = new Audio("http://www.moviesoundscentral.com/sounds/lord_of_the_rings/youshallnotpasss.wav");
-var audio2 = new Audio("http://www.moviesoundscentral.com/sounds/lord_of_the_rings/terriblyclever.wav")
-var answers = document.getElementById("#answers");
-var question = document.getElementById(".question");
-var isCorrect;
-var isWrong;
-var correctAnswers;
-var finalScore;
-var wrongAnswers;
-
-/*//the questions are hidden at first   
-    $("#container2").hide();
-
-//on the start click, the start button goes away and the questions appear
-    $("#startButton").click(function() {
-        $("#container1").hide();
-        $("#container2").show();
-//this should start the timer
-        startTimer();
-    });
-*/
-//create timer
-
-//timer starts at 30 seconds and counts down from there
-/*function startTimer(){
 var counter = 30;
 var interval = setInterval(function() {
     counter--;
@@ -161,125 +177,122 @@ var interval = setInterval(function() {
     if (counter == 0) {
         clearInterval(interval);
     }
-
-}, 1000,);}*/
-
-
-//timeUp should only run if time is up and answers have not been completed
-/*setTimeout(timeUp, 1000 * 30);
-    function timeUp() {
-  $("#timer").append("<p>You shall not PASS!</p>");
-   audio.play();
-    }
-
-//if answers have been completed
-    function onTime() {
-  $("#timer").append("<p>I suppose you thing that was terribly clever</p>");
-   audio2.play();
-    }*/
-
-
-
-
-//timer starts once the start button is clicked
-
-//add a submit button
-
-//upon clicking a question, if it is correct the button should turn green, if it is wrong, the button should shake, fade, or turn red
-
-//once an answer is chosen, user cannot choose another answer
-
-//once all the answers have been submitted (or the time runs out), user score pops up with right answers and wrong answers
-
-
-
-//write the questions
-  var questions = [ {
-        question : "What kind of creatures are the spawn of Ungoliant?",
-        answers : ["Flying fell beasts","Giant Spiders","Uruk-hai","Hill Giants"],
-        isCorrect : "Giant Spiders"
-    },{ 
-        question: "Who was Elanor Gardner? (Also known as Elanor the Fair)?",
-        answerArray : ['The daughter of Samwise Gamgee and Rosie Cotton','The Queen of Mirkwood and mother of Legolas','Wife of the Bard the Bowman of Laketown','The mother of Aragon'],
-        isCorrect : 'The daughter of Samwise Gamgee and Rosie Cotton'
-        
-    },{
-        question: "How many Rings of Power were forged in the second age?",
-        answerArray : ['1','19','20','13'],
-        isCorrect : '20'
-
-    },{
-        question: "What is the name of Elronds brother?",
-        answerArray :['Elladan','Gwaihir','Estel','Elros'],
-        isCorrect :'Elros'
-     
-    },{
-        question: "What are Durin's Folk more commonly known as?",
-        answerArray :['Forest Elves','Great Eagles','Hobbits that moved from the Shire','Dwarves'],
-        isCorrect : 'Dwarves'
-
-    },{
-        question: "Which is the only named female Dwarf in the Hobbit or the Lord of the Rings?",
-        answerArray : ['Dís','Nimphelos','Mîm','Aulë'],
-        isCorrect : 'Dís'
-
-    },{
-        question: "Which are the following are not Maiar(Maia)?",
-        answerArray : ['Gandalf','Manwë','Balrogs','Melian'],
-        isCorrect : 'Manwë'
-
-    },{
-        question: "In 'Fellowship of the Ring,' what gift does Lady Galadriel give Gimli before the fellowship leaves Lothlorien?",
-        answerArray : ['An Elvish Axe','A Dwarvish Dagger','3 strands of her hair','A mug of Elvish beer'],
-        isCorrect : '3 strands of her hair'
-
-    }];
-//console.log questions
-/*console.log(questions);
-
-//console.log question 1
-console.log(questions[0].question);*/
-//trigger the ajax call
-/*          var movie = ($(this).attr("data-name"));
-          var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece";
-          $.getJSON(queryURL, function(response){
-            $("#Rachel").append(response.title);
-          console.log(response.Title);
-          console.log(response.Runtime);
-          $("#Rachel").append(response.Title);
-          $("#Rachel").append(response.Runtime);
-            })
-        }*/
-
-
-$(".answers").on("click", function(event) {
-        $.ajax({
-          url: questions,
-          method: "GET"
-
-        })
-        .done(function(response) 
-
- //        console.log(response);
- // /*       console.log(questions);*/
- //    }
-       /* console.log(questions);*/
+}, 1000);
  
-/*var question1 = document.getElementById("question1")
-for (var i = 0; i < questions.length; i++) {
-        questions[0]
-}
-console.log(questions[0]);
-*/
+ console.log(counter);
+ 
+ //timeUp should only run if time is up and answers have not been completed, doesn't work
+ setTimeout(timeUp, 1000 * 30);
+     function timeUp() {
+   $("#timer").append("<p>You shall not PASS!</p>");
+    audio.play();
+     }
+ 
+ //if answers have been completed, doesn't work
+     function onTime() {
+   $("#timer").append("<p>I suppose you thing that was terribly clever</p>");
+    audio2.play();
+     }
+ 
+ 
+ 
+ 
+ //timer starts once the start button is clicked
+ 
+ //add a submit button
+ 
+ //upon clicking a question, if it is correct the button should turn green, if it is wrong, he button should shake, fade, or turn red +
+ //once an answer is chosen, user cannot choose another answer
+ 
+ //once all the answers have been submitted (or the time runs out), user score pops up with right answers and wrong answers
+ 
+ 
+  
+ //write the questions
+    var questions = [ {
+          question : "What kind of creatures are the spawn of Ungoliant?",
+          answers : ["Flying fell beasts","Giant Spiders","Uruk-hai","Hill Giants"],
+         isCorrect : "Giant Spiders"
+     },{ 
+         question: "Who was Elanor Gardner? (Also known as Elanor the Fair)?",
+         answerArray : ['The daughter of Samwise Gamgee and Rosie Cotton','The Queen of Mirkwood and mother of Legolas','Wife of the Bard the Bowman of Laketown','The mother of Aragon'],
+         isCorrect : 'The daughter of Samwise Gamgee and Rosie Cotton'
+         
+     },{
+         question: "How many Rings of Power were forged in the second age?",
+         answerArray : ['1','19','20','13'],
+         isCorrect : '20'
+ 
+     },{
+         question: "What is the name of Elronds brother?",
+         answerArray :['Elladan','Gwaihir','Estel','Elros'],
+         isCorrect :'Elros'
+      
+     },{
+         question: "What are Durin's Folk more commonly known as?",
+         answerArray :['Forest Elves','Great Eagles','Hobbits that moved from the Shire','Dwarves'],
+         isCorrect : 'Dwarves'
+ 
+     },{
+         question: "Which is the only named female Dwarf in the Hobbit or the Lord of the Rings?",
+         answerArray : ['Dís','Nimphelos','Mîm','Aulë'],
+         isCorrect : 'Dís'
+ 
+     },{
+         question: "Which are the following are not Maiar(Maia)?",
+         answerArray : ['Gandalf','Manwë','Balrogs','Melian'],
+         isCorrect : 'Manwë'
+ 
+     },{
+         question: "In 'Fellowship of the Ring,' what gift does Lady Galadriel give Gimli before the fellowship leaves Lothlorien?",
+         answerArray : ['An Elvish Axe','A Dwarvish Dagger','3 strands of her hair','A mug of Elvish beer'],
+         isCorrect : '3 strands of her hair'
+ 
+     }];
 
-/*$(".answers").on("click", function (evt) {
-    console.log(evt);
-    console.log(this);
-    });
-    */
 
-    </script>
+console.log(questions[0].question);
 
-</body>
 
-</html>
+ //trigger the ajax call (didn't work)
+/*         var question = ($(this).attr("data-name"));
+          var queryArray = questions;
+         $.getJSON(queryArray, function(response){
+          
+          console.log(response.question);
+
+             })
+      */
+ 
+/* 
+ $(".answers").on("click", function(event) {
+         $.ajax({
+           url: questions,
+           method: "GET"
+ 
+         })
+         .done(function(response) */
+ 
+  //        console.log(response);
+  // /*       console.log(questions);*/
+  //    }
+        /* console.log(questions);*/
+  
+  /*var question1 = document.getElementById("question1")
+  for (var i = 0; i < questions.length; i++) {
+          questions[0]
+ }
+ console.log(questions[0]);
+ /
+ //console.log questions
+ console.log(questions);*/
+ 
+
+ 
+
+ 
+     </script>
+ 
+ </body>
+ 
+ </html>
