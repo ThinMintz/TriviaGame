@@ -15,20 +15,22 @@
 </head>
 
 <body>
-    <div class="jumbotron">
-        <h1 class="display-2">Lord of the Rings</h1>
-        <h2 class="display-4">Trivia Game</h2>
-    </div>
     
-    <div class="container" id="container1">
+    <!-- <div class="container" id="container1">
         <div class="row justify-content-md-center">
-            <button type="button" class="btn btn-success btn-lg btn-block" id="startButton">
-            <h3>Speak friend, and enter!</h3>
-            </button>
-            <img src="assets/images/Gates.jpg">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-success btn-lg btn-block" id="startButton">
+                        <h3>Speak friend, and enter!</h3>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
+    
+    
     <div class="container" id="container2">
         <div class="row justify-content-md-center"> 
             <div class="col-md-4">
@@ -37,12 +39,12 @@
                     <p class="text-center" id="timer"> </p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     
  <div class="row justify-content-md-center" >
             <div class="col-md-12">
-                <h4 class="text-center" id="question">What kind of creatures are the spawn of Ungoliant?</h4>
+                <h4 class="text-center" id="question1">What kind of creatures are the spawn of Ungoliant?</h4>
             </div>
             <div class="btn-group-vertical">
                 <button type="button" class="btn btn-secondary answers isWrong">Flying fell beasts</button>
@@ -136,34 +138,35 @@ var correctAnswers;
 var finalScore;
 var wrongAnswers;
 
-//the questions are hidden at first   
+/*//the questions are hidden at first   
     $("#container2").hide();
 
 //on the start click, the start button goes away and the questions appear
     $("#startButton").click(function() {
         $("#container1").hide();
         $("#container2").show();
+//this should start the timer
+        startTimer();
     });
-
+*/
 //create timer
 
 //timer starts at 30 seconds and counts down from there
+/*function startTimer(){
 var counter = 30;
 var interval = setInterval(function() {
     counter--;
     console.log(counter);
-}, 1000);
-    // Display 'counter' wherever you want to display it.
- /* if (counter == 0) {
-        // Display a login box
-   $("#timer").append("<p>counter</p>");
+//if counter = 0, stop counting    
+    if (counter == 0) {
         clearInterval(interval);
-    }*/
+    }
 
-console.log(counter);
+}, 1000,);}*/
+
 
 //timeUp should only run if time is up and answers have not been completed
-setTimeout(timeUp, 1000 * 30);
+/*setTimeout(timeUp, 1000 * 30);
     function timeUp() {
   $("#timer").append("<p>You shall not PASS!</p>");
    audio.play();
@@ -173,7 +176,7 @@ setTimeout(timeUp, 1000 * 30);
     function onTime() {
   $("#timer").append("<p>I suppose you thing that was terribly clever</p>");
    audio2.play();
-    }
+    }*/
 
 
 
@@ -232,12 +235,36 @@ setTimeout(timeUp, 1000 * 30);
 
     }];
 //console.log questions
-console.log(questions);
+/*console.log(questions);
 
 //console.log question 1
-console.log(questions[0].question);
+console.log(questions[0].question);*/
+//trigger the ajax call
+/*          var movie = ($(this).attr("data-name"));
+          var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=40e9cece";
+          $.getJSON(queryURL, function(response){
+            $("#Rachel").append(response.title);
+          console.log(response.Title);
+          console.log(response.Runtime);
+          $("#Rachel").append(response.Title);
+          $("#Rachel").append(response.Runtime);
+            })
+        }*/
 
 
+$(".answers").on("click", function(event) {
+        $.ajax({
+          url: questions,
+          method: "GET"
+
+        })
+        .done(function(response) 
+
+ //        console.log(response);
+ // /*       console.log(questions);*/
+ //    }
+       /* console.log(questions);*/
+ 
 /*var question1 = document.getElementById("question1")
 for (var i = 0; i < questions.length; i++) {
         questions[0]

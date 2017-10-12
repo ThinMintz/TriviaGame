@@ -1,8 +1,12 @@
-.jumbotron {
+body {
+   background-image: url('../images/Gates.jpg');
+}
+
+/* .jumbotron {
 background-image: url('../images/LOTR.jpg');
 font-family:'Almendra SC', serif;
 background-size: cover;
-}
+} */
 
 h1, h2{
    color: black;
@@ -11,7 +15,7 @@ h1, h2{
    -webkit-text-stroke-color: black;
 }
 
-div.jumbotron div.col-md-6 p {
+div.col-md-6 p {
 	color: black;
    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
    -webkit-text-stroke-width: 1px;
